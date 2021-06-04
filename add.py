@@ -11,7 +11,7 @@ re="\033[1;31m"
 gr="\033[1;32m"
 cy="\033[1;36m"
 
-def banner():
+def bannel():
     os.system('clear')
     print(f"""
 {re}╔══╗    ╔╗               ╔═══╗          ╔╗      
@@ -26,7 +26,7 @@ def banner():
  {re}Subscribe Ishan Is Live on Youtube.
    {cy}https://www.youtube.com/c/IshanIsLiveNow
         """)
-banner()
+
 
 MAX_ADD_COUNT = 50
 ORIGIN_CHAT = ''
@@ -241,28 +241,34 @@ async def add_client():
         print(f'{cy}- New Client {new_client.storage.database}')
 
 
-if not os.path.exists('./clients'):
-    os.mkdir('./clients')
-br = int(input(gr+ "Select Option "+ cy+ " \n 1: To add members \n 2: To add account \n 3: To check account Stats"+ gr+" \n Enter:- "))
-if br==1:
-    banner()
-    func = main()
-    print(gr+'\nHere we go...\n')
+if __name__ == "__main__":
+
+    if not os.path.exists(CLIENTS_DIR):
+        os.mkdir(CLIENTS_DIR)
+
+    if len(sys.argv) == 1:
+        bannel()
+        func = main()
+    elif len(sys.argv) == 2:
+        if sys.argv[1] == '--add':
+            bannel()
+            func = add_client()
+        elif sys.argv[1] == '--check':
+            bannel()
+            func = report_status()
+        elif sys.argv[1] == '--continue':
+            bannel()
+            func = main(once=False)
+        else:
+            exit('BAD ARGS')
+    else:
+        exit('BAD ARGS')
+        
+
+    print('\nHere we go...\n')
 
     loop = asyncio.get_event_loop()
     loop.run_until_complete(func)
     loop.close()
 
-    print(re+'\nFinish!\n')
-elif br==2:
-    banner()
-    func = add_client()
-elif br==3 :
-    banner()
-    func = report_status()
-elif br==4:
-    banner()
-    func = main(once=False)
-else:
-    exit('BAD ARGS')
-
+    print('\nFinish!\n')
