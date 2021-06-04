@@ -37,11 +37,19 @@
 
 `$ git clone https://github.com/IshanSingla/TelegramScraper`
 
-`$ cd Telegram-Scraper-Adder`
+`$ cd TelegramScraper`
 
 * To Scare members from group & Add Scarped members to your group. 
 
 `$ python add.py`
+
+* To Login Accounts 
+
+`$ python add.py --add`
+
+* To Check Account Stats
+
+`$ python add.py --check`
 
 
 ## • Watch Video Tutorial From Below
