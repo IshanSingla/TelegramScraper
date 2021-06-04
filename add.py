@@ -28,7 +28,10 @@ def bannel():
         """)
 
 
+CLIENTS_DIR = './clients'
 MAX_ADD_COUNT = 50
+SLEEP_INTERVALS = 1
+RETRIES = 2
 ORIGIN_CHAT = ''
 DESTINATION_CHAT = ''
 
