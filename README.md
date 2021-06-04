@@ -4,10 +4,10 @@
 
 <p align="center"><img src="https://img.shields.io/badge/Version-1.01-brightgreen"></p>
 <p align="center">
-  <a href="https://github.com/termuxprofessor">
+  <a href="https://github.com/IshanSingla">
     <img src="https://img.shields.io/github/followers/th3unkn0n?label=Follow&style=social">
   </a>
-  <a href="https://github.com/termuxprofessor/Telegram-Scraper-Adder">
+  <a href="https://github.com/IshanSingla/TelegramScraper">
     <img src="https://img.shields.io/github/stars/th3unkn0n/TeleGram-Group-Scraper?style=social">
   </a>
 </p>
@@ -20,11 +20,6 @@
 
 ---
 
-## • API Setup
-* Go to http://my.telegram.org  and log in.
-* Click on API development tools and fill the required fields.
-* put app name you want & select other in platform Example :
-* copy "api_id" & "api_hash" after clicking create app ( will be used in setup.py )
 
 ## • How To Install and Use In Termux
 
@@ -34,21 +29,20 @@
 
 `$ pkg install git`
 
+`$ pip install pyrogram`
+
+`$ pip install Telethon`
+
+`$ pip install requests`
+
 `$ git clone https://github.com/termuxprofessor/TeleGram-Scraper-Adder`
 
 `$ cd Telegram-Scraper-Adder`
 
-* Install requierments & Setup Configuration File. ( apiID, apiHash )
 
-`$ python setup.py`
+* To Scare members from group & Add Scarped members to your group. 
 
-* To Scare members from group.
-
-`$ python scraper.py`
-
-* Add Scarped members to your group. 
-
-`$ python adder.py`
+`$ python add.py`
 
 ## • Watch Video Tutorial From Below
 * https://youtu.be/hNztfzMMPOc
@@ -58,9 +52,9 @@
   Follow Me On
 </p>
 <p align="center">
-  <a href="https://www.youtube.com/c/TermuxProfessorYT">
+  <a href="https://www.youtube.com/channel/UCKKC1M8UElKt29l0LTfIVxQ">
     <img src="https://github.com/th3unkn0n/extra/blob/master/.img/yt.png" width="40" height="40">
   </a>
-  <a href="https://www.instagram.com/termuxprofessor/">
+  <a href="https://www.instagram.com/is_ishan_singla/">
     <img src="https://github.com/th3unkn0n/extra/blob/master/.img/ig.png" width="40" height="40">
 </p>
